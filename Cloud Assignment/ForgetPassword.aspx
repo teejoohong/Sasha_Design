@@ -1,10 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SyaSyaDesign.Master" AutoEventWireup="true" CodeBehind="ForgetPassword.aspx.cs" Inherits="Cloud_Assignment.ForgetPassword" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1 {
-            height: 31px;
-        }
-    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -24,9 +20,9 @@
                 &nbsp;</td>
         </tr>
         <tr class="rowInput">
-            <td class="text"> Account Type</td>
+            <td class="text"> Account Type :</td>
             <td  style="text-align:left">
-                <asp:DropDownList ID="ddlType" runat="server">
+                <asp:DropDownList ID="ddlType" CssClass="ddlForgetPassword" runat="server">
                     <asp:ListItem>Customer</asp:ListItem>
                     <asp:ListItem>Staff</asp:ListItem>
                 </asp:DropDownList>
