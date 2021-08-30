@@ -1,0 +1,82 @@
+﻿body {
+}
+.viewChoose{
+    margin:0px auto 50px auto; 
+    width:50%;
+    background-color:white;
+    text-align:center;
+    border:5px solid lightpink;
+}
+
+.btnView {
+    width: 400px;
+    height: 50px;
+    border-color: lightpink;
+    background-color: white;
+    color: black;
+}
+
+    .btnView:hover {
+        background-color:lightpink !important;
+        
+    }
+
+.rowInput {
+    height: 80px
+}
+
+.text {
+    width: 40%;
+    text-align: right;
+}
+
+.rowInput input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 35%;
+    height: 30px
+}
+
+.registerTable {
+    background-color: white;
+    border:5px solid pink;
+}
+
+.inputBox {
+    background-color: white;
+}
+
+.menuBar {
+    margin-top: 0.001px;
+}
+
+.buttonLogin {
+    background-color: white;
+    color: black;
+    width: 20%;
+    height: 30px;
+    font-size: 18px;
+    border: 2px solid lightpink;
+}
+
+    .buttonLogin:hover {
+        background-color: lightpink;
+    }
+
+.ddlGender {
+    width: 35%;
+    height: 30px
+}
+
+.rowButtonLogin {
+    text-align: center;
+    height: 50px;
+}
+
+.linkForgetPassword {
+    text-align: right
+}
+
+.rowLink {
+    height: 50px;
+}

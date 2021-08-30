@@ -1,0 +1,85 @@
+﻿.viewChoose {
+    margin: 0px auto 50px auto;
+    width: 50%;
+    background-color: white;
+    text-align: center;
+    border: 5px solid lightpink;
+}
+
+.btnView {
+    width: 400px;
+    height: 50px;
+    border-color: lightpink;
+    background-color: white;
+    color: black;
+}
+
+    .btnView:hover {
+        background-color: lightpink !important;
+    }
+
+
+.menuBar {
+    margin-top: 0.001px;
+}
+
+.loginTable {
+    width: 50%;
+    margin: 50px auto 100px auto;
+    border: 5px solid lightpink;
+    background-color: white;
+}
+
+.loginTitle {
+    text-align: center;
+    background-color: pink;
+    color: black;
+    height: 80px;
+    font-size: 18px;
+}
+
+.rowInput {
+    height: 80px
+}
+
+.inputBox {
+    background-color: white;
+}
+
+.rowInput input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 35%;
+    height: 30px
+}
+
+.rowButtonLogin {
+    text-align: center;
+    height: 50px;
+}
+
+.rowLink {
+    height: 50px;
+}
+
+.buttonLogin {
+    background-color: white;
+    color: black;
+    width: 20%;
+    height: 30px;
+    font-size: 18px;
+    border: 2px solid lightpink;
+}
+
+    .buttonLogin:hover {
+        background-color: lightpink;
+    }
+
+.text {
+    width: 40%;
+    text-align: right;
+}
+
+.linkForgetPassword {
+    text-align: right
+}
