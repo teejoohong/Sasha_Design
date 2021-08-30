@@ -14,15 +14,15 @@ namespace Cloud_Assignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["Value"] = "ST1";
+            
         }
-        protected void DataList1_ItemDataBound(object sender, DataListItemEventArgs e)
-        {
+        //protected void DataList1_ItemDataBound(object sender, DataListItemEventArgs e)
+        //{
 
-            DataRowView datarow = (DataRowView)e.Item.DataItem;
-            string imageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])datarow["Image"]);
-            (e.Item.FindControl("Image1") as Image).ImageUrl = imageUrl;
+        //    DataRowView datarow = (DataRowView)e.Item.DataItem;
+        //    string imageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])datarow["Image"]);
+        //    (e.Item.FindControl("Image") as Image).ImageUrl = imageUrl;
 
-        }
+        //}
     }
 }

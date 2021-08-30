@@ -27,10 +27,13 @@
                     <th class="title">
                         Image
                     </th>
+                    <th class="title">
+                        Status
+                    </th>
                 </tr>
         </table>
 
-    <asp:DataList ID="DataList1" runat="server" CssStyle="Display : flex"  DataSourceID="SqlDataSource1" OnItemDataBound="DataList1_ItemDataBound" Width="100%">
+    <asp:DataList ID="DataList1" runat="server" CssStyle="Display : flex"  DataSourceID="SqlDataSource1" Width="100%">
         <ItemTemplate>
             <table class="table table-bordered" style="width: 100%; background-color: white">
             <tr>
@@ -51,7 +54,11 @@
             </td>
             <td class="width1">
             <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Image") %>'  Height="100px" Width="100px"/>
-            </tr>
+            </td>
+            <td class="width1">
+            <asp:Label ID="StatusLabel" runat="server" Text='<%# Eval("Status") %>' />
+            </td>
+            </tr> 
             </table>
             <br />
             <br />
@@ -59,7 +66,7 @@
     </asp:DataList>
     </div>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Gallery.DrawID, OrderDetails.OrderID, OrderDetails.[Quantity], OrderDetails.Price, Gallery.Name, Gallery.Image FROM Gallery INNER JOIN OrderDetails ON Gallery.DrawID = OrderDetails.DrawID WHERE (OrderDetails.OrderID = @OrderID)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Gallery.DrawID, OrderDetails.OrderID, OrderDetails.[Quantity], OrderDetails.Price, Gallery.Name, Gallery.Image, OrderDetails.Status FROM Gallery INNER JOIN OrderDetails ON Gallery.DrawID = OrderDetails.DrawID WHERE (OrderDetails.OrderID = @OrderID)">
         <SelectParameters>
             <asp:QueryStringParameter Name="OrderID" QueryStringField="id" />
         </SelectParameters>

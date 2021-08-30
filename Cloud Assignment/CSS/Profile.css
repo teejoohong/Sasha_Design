@@ -45,6 +45,10 @@ a {
     cursor: pointer;
 }
 
+.buttonUpload:hover {
+    background-color: lightpink !important;
+}
+
 .button {
     padding: 2px 5px;
     border: 0;
@@ -60,6 +64,9 @@ a {
     cursor: pointer;
 }
 
+.button:hover {
+    background-color: lightpink !important;
+}
 
 .lbl {
     padding-right: 0%
