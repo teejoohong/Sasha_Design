@@ -22,7 +22,7 @@ namespace Cloud_Assignment
                 SqlConnection con;
                 string strcon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
                 con = new SqlConnection(strcon);
-                if (Global.accountType == "a")
+                if (Global.accountType == "s")
                 {
                     //profile pic command
                     SqlDataSource1.SelectCommand = "SELECT [ProfilePicture] FROM [Staff] WHERE StaffID = @StaffID";

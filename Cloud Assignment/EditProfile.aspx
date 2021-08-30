@@ -39,9 +39,17 @@
             </td>
             <td class="sideColumn2">
                 <span class="lbl" style="font-weight : bold">Address :</span><br />
-                <asp:TextBox ID="txtAddress" CssClass="txtBox" runat="server"  ></asp:TextBox><br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Address cannot be empty." ControlToValidate="txtAddress" ForeColor="Red" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
-                 <br />
+                <% if (Session["Bar"] == "C")
+                             { %>
+                    <asp:TextBox ID="txtAddress" CssClass="txtBox" runat="server"  ></asp:TextBox><br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Address cannot be empty." ControlToValidate="txtAddress" ForeColor="Red" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
+                     <br /><%}%> 
+                  
+
+                <% if (Session["Bar"] == "S")
+                             { %>
+                    <br /><br /><br />
+                <%}%> 
             </td>
             <td class="sideColumn">&nbsp;</td>
         </tr>

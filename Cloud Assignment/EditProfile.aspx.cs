@@ -20,7 +20,7 @@ namespace Cloud_Assignment
             con = new SqlConnection(strcon);
             if (!IsPostBack) {
 
-                if (Global.accountType == "a")
+                if (Global.accountType == "s")
                 {
                     //profile pic command
                     SqlDataSource1.SelectCommand = "SELECT [ProfilePicture] FROM [Staff] WHERE StaffID = @StaffID";
@@ -38,7 +38,7 @@ namespace Cloud_Assignment
                             lblUsername.Text = dtr["Username"].ToString();
                             txtEmail.Text = dtr["Email"].ToString();
                             txtContactNumber.Text = dtr["PhoneNumber"].ToString();
-                            txtAddress.Text = dtr["Address"].ToString();
+                            txtAddress.Text = "";
 
                         }
                     }
@@ -90,7 +90,7 @@ namespace Cloud_Assignment
             if (Session["Bar"] == "S")
             {
                 con.Open();
-                string strUpdate = "UPDATE [Staff]  Email = @Email, PhoneNumber = @PhoneNumber WHERE StaffID = @StaffID";
+                string strUpdate = "UPDATE [Staff] SET  Email = @Email, PhoneNumber = @PhoneNumber WHERE StaffID = @StaffID";
 
                 SqlCommand cmdUpdate = new SqlCommand(strUpdate, con);
 
