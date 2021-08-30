@@ -84,6 +84,8 @@
     <Content Include="CSS\HomePage.css" />
     <Content Include="CSS\LogIn.css" />
     <Content Include="CSS\MasterPage.css" />
+    <Content Include="CSS\OrderHistory.css" />
+    <Content Include="CSS\OrderHistoryDetails.css" />
     <Content Include="CSS\Profile.css" />
     <Content Include="CSS\Register.css" />
     <Content Include="EditProfile.aspx" />
@@ -91,6 +93,8 @@
     <Content Include="Gallery.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="LogIn.aspx" />
+    <Content Include="OrderHistory.aspx" />
+    <Content Include="OrderHistoryDetails.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="SellerUploadShirt.aspx" />
@@ -152,6 +156,20 @@
     </Compile>
     <Compile Include="LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHistoryDetails.aspx.cs">
+      <DependentUpon>OrderHistoryDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderHistoryDetails.aspx.designer.cs">
+      <DependentUpon>OrderHistoryDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
