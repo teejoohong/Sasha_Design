@@ -117,4 +117,25 @@
     <asp:Button ID="btnConfirm" style="border-color: #4D94FF; background-color: white; color: #284E98;" runat="server" Text="Confirm Purchase" OnClick="btnConfirm_Click" />
     </div>
     <br />
+
+        <script>
+    function delaySent() {
+        var delay = 5000;
+        setTimeout(function () {
+            window.location.href = "HomePage.aspx";
+        }, delay);
+        alert("An link has been successfully sent out to an email if the email has been created before. Please check your inbox.");
+
+        }
+
+        function delaySavePass() {
+            var delay = 5000;
+            setTimeout(function () {
+                window.location.href = "HomePage.aspx";
+            }, delay);
+            alert("The password has been reset.");
+
+        }
+
+        </script>
 </asp:Content>
