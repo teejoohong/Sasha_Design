@@ -1,0 +1,55 @@
+﻿body {
+}
+.DrawID {
+    width: 10%;
+}
+
+.Name {
+    width: 15%;
+}
+
+.Category {
+    width: 10%;
+}
+
+.Image {
+    width: 20%;
+}
+
+.Quantity {
+    width: 8%;
+}
+
+.Price {
+    width: 7%;
+}
+
+.Edit {
+    width: 7%;
+}
+
+.Delete {
+    width: 8%;
+}
+
+.button {
+    border-color: #4D94FF;
+    background-color: white;
+    color: #284E98;
+}
+
+.datatable {
+    margin: 0 auto;
+    width: 75%;
+    min-height: 400px
+}
+
+.desptable{
+    width: 100%;
+    margin: 25%;
+}
+
+.datalist{
+    width: 75%;
+}
+

@@ -86,6 +86,7 @@
     <Content Include="CSS\MasterPage.css" />
     <Content Include="CSS\Profile.css" />
     <Content Include="CSS\Register.css" />
+    <Content Include="CSS\SellerViewShirt.css" />
     <Content Include="EditProfile.aspx" />
     <Content Include="EditProfilePicture.aspx" />
     <Content Include="Gallery.aspx" />
@@ -93,7 +94,9 @@
     <Content Include="LogIn.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="SellerEditShirt.aspx" />
     <Content Include="SellerUploadShirt.aspx" />
+    <Content Include="SellerViewShirt.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -168,12 +171,26 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SellerEditShirt.aspx.cs">
+      <DependentUpon>SellerEditShirt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellerEditShirt.aspx.designer.cs">
+      <DependentUpon>SellerEditShirt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SellerUploadShirt.aspx.cs">
       <DependentUpon>SellerUploadShirt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SellerUploadShirt.aspx.designer.cs">
       <DependentUpon>SellerUploadShirt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellerViewShirt.aspx.cs">
+      <DependentUpon>SellerViewShirt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellerViewShirt.aspx.designer.cs">
+      <DependentUpon>SellerViewShirt.aspx</DependentUpon>
     </Compile>
     <Compile Include="SyaSyaDesign.Master.cs">
       <DependentUpon>SyaSyaDesign.Master</DependentUpon>
