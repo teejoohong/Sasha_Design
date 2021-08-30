@@ -3,16 +3,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-
+        
         .width1 {
             width: 120px;
         }
       
     </style>
-
+      <asp:MultiView ID="MultiView1" runat="server"> 
+        <asp:View ID="inputView" runat="server">
       <div style="margin:0% 10% 0% 10%;">
         <h2 style="text-align: center">
             Checkout Payment Page
@@ -117,4 +115,26 @@
     <asp:Button ID="btnConfirm" style="border-color: #4D94FF; background-color: white; color: #284E98;" runat="server" Text="Confirm Purchase" OnClick="btnConfirm_Click" />
     </div>
     <br />
+            </asp:View>
+          <asp:View runat="server" ID="SuccessPayment">
+              <br />
+                <p>
+                    <asp:HyperLink ID="redirectHome" runat="server" NavigateUrl="~/HomePage.aspx" Text="">Thank you for your purchase. You will be redirected to homepage in 5 seconds. Click here to redirect now</asp:HyperLink>
+                </p>
+            <br />
+          </asp:View>
+          </asp:MultiView>
+
+        <script>
+    function delaySent() {
+        var delay = 5000;
+        setTimeout(function () {
+            window.location.href = "HomePage.aspx";
+        }, delay);
+        alert("Payment successful. You will be redicected to home page in 5 seconds.");
+
+    }
+
+
+        </script>
 </asp:Content>

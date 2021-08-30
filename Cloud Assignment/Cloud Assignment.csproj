@@ -91,6 +91,7 @@
     <Content Include="EditProfile.aspx" />
     <Content Include="EditProfilePicture.aspx" />
     <Content Include="Gallery.aspx" />
+    <Content Include="ForgetPassword.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="LogIn.aspx" />
     <Content Include="OrderHistory.aspx" />
@@ -99,6 +100,7 @@
     <Content Include="Register.aspx" />
     <Content Include="SellerUploadShirt.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Wishlist.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutUs.aspx.cs">
@@ -142,6 +144,13 @@
     </Compile>
     <Compile Include="Gallery.aspx.designer.cs">
       <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
@@ -199,6 +208,13 @@
     </Compile>
     <Compile Include="SyaSyaDesign.Master.designer.cs">
       <DependentUpon>SyaSyaDesign.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Wishlist.aspx.cs">
+      <DependentUpon>Wishlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wishlist.aspx.designer.cs">
+      <DependentUpon>Wishlist.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

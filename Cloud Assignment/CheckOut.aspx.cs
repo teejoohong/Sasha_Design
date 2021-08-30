@@ -13,6 +13,7 @@ namespace Cloud_Assignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            MultiView1.ActiveViewIndex = 0;
             loadAddress();
         }
 
@@ -219,9 +220,11 @@ namespace Cloud_Assignment
                         //client.EnableSsl = true;
                         //client.Credentials = new System.Net.NetworkCredential("testingg726@gmail.com", "abcd.1234");
                         //client.Send(message);
-
-                        ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Payment Successfully! " + "');", true);
-                        Response.Redirect("HomePage.aspx");
+                        MultiView1.ActiveViewIndex = 1;
+                        ClientScript.RegisterStartupScript(GetType(), "hwa", "delaySent();", true);
+                        
+                       // ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Payment Successfully! " + "');", true);
+                       // Response.Redirect("HomePage.aspx");
 
                     }
                     else
