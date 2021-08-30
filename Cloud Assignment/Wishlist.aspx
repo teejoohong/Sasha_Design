@@ -98,7 +98,7 @@
         <asp:Label ID="Label3" runat="server" Text="" style="font-size:x-large;"></asp:Label>
     </div>
     
-        <asp:DataList ID="DataList1" runat="server" DataKeyField="CustomerID" DataSourceID="SqlDataSource1" OnItemDataBound="DataList1_ItemDataBound" OnItemCommand="DataList1_ItemCommand" Height="16px" Width="100%">
+        <asp:DataList ID="DataList1" runat="server" DataKeyField="CustomerID" DataSourceID="SqlDataSource1" OnItemCommand="DataList1_ItemCommand" Height="16px" Width="100%">
             <ItemTemplate>
                 <br />
                 <table class="table table-bordered" style="width: 100%; background-color: lightgray">
