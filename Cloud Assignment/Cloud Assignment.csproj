@@ -77,6 +77,8 @@
     <Content Include="BuildInPictures\carousell2.jpg" />
     <Content Include="BuildInPictures\carousell3.jpg" />
     <Content Include="BuildInPictures\logoSya.PNG" />
+    <Content Include="Cart.aspx" />
+    <Content Include="CheckOut.aspx" />
     <Content Include="CSS\AboutUs.css" />
     <Content Include="CSS\Gallery.css" />
     <Content Include="CSS\HomePage.css" />
@@ -101,6 +103,20 @@
     </Compile>
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.aspx.cs">
+      <DependentUpon>CheckOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckOut.aspx.designer.cs">
+      <DependentUpon>CheckOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditProfile.aspx.cs">
       <DependentUpon>EditProfile.aspx</DependentUpon>
