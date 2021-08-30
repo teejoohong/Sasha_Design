@@ -1,0 +1,70 @@
+﻿.auto-style {
+    width: 100%;
+    background-color: pink;
+}
+
+.auto-style1 {
+    text-align: center;
+    background-color: white;
+}
+
+.width1 {
+    width: 16%;
+    padding: 5%;
+}
+
+.tableFormat {
+    border-collapse: collapse;
+    border: 5px solid lightpink;
+    height: auto;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    margin-top: 100px;
+    background-color: lightgray;
+    width: 50%;
+    text-align: center;
+}
+
+.btnView {
+    background-color: white;
+    color: black;
+    height: 30px;
+    font-size: 18px;
+    border: 2px solid lightpink;
+}
+
+.btnView:hover {
+    background-color: lightpink !important;
+}
+
+.content {
+    border: none;
+    width: 100%;
+    background-color: lightgray;
+}
+
+.buttonLogin {
+    border-color: #4D94FF;
+    background-color: white;
+    color: black;
+    font-size: x-large;
+    text-align: center;
+    width: 320px;
+    border: 2px solid lightpink;
+}
+
+.buttonLogin:hover {
+    background-color: lightpink !important;
+}
+
+.tableTitle {
+    width: 100%;
+    text-align: center;
+    background-color: pink;
+    color: black;
+    height: 80px;
+    font-size: 18px;
+}
+

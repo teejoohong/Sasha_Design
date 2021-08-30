@@ -43,8 +43,8 @@ namespace Cloud_Assignment
 
         protected void ltnButton1_Click(object sender, EventArgs e)
         {
-            Session["UserID"] = null;
-            Session["Username"] = null;
+            Session["Value"] = null;
+            Session["Bar"] = null;
             Response.Redirect("LogIn.aspx");
         }
     }

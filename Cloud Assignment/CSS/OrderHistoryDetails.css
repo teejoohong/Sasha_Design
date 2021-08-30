@@ -1,0 +1,32 @@
+﻿.title {
+    width: 15%;
+    padding: 5%;
+    text-align: center;
+}
+
+.tableFormat {
+    border-collapse: collapse;
+    border-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: darkgray;
+    width: 1200px;
+    height: auto;
+    margin-bottom: 3%;
+}
+
+.tableFormat2 {
+    border-collapse: collapse;
+    border-color: white;
+    background-color: lightgray;
+    width: 1200px;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.width1 {
+    width: 15%;
+    padding: 5%;
+    text-align: center;
+}

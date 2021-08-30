@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>Smart Personal Scheduler</title>
+    <title>Sya Sya Design</title>
 
     <!--CSS-->
     <link href="CSS/MasterPage.css" rel="stylesheet" type="text/css" />
@@ -39,11 +39,11 @@
             <Items>
                    <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Home" Value="Home Page"/>
                    <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="AboutUs" Value="About Us"/>
-                   <asp:MenuItem NavigateUrl="~/TimeTableGenerator.aspx" Text="Scheduler" Value="Gallery"/>
-                   <asp:MenuItem NavigateUrl="~/Tutorial.aspx" Text="Tutorial" Value="Wishlist" />
-                   <asp:MenuItem NavigateUrl="~/BMI.aspx" Text="BMI" Value="Cart"/>
-                   <asp:MenuItem NavigateUrl="~/Calories.aspx" Text="Calories" Value="Order History" />
-                    <asp:MenuItem NavigateUrl="~/InfoCenter.aspx" Text="Search" Value="Search"/>
+                   <asp:MenuItem NavigateUrl="~/Gallery.aspx" Text="Gallery" Value="Gallery"/>
+                   <asp:MenuItem NavigateUrl="~/Wishlist.aspx" Text="Wishlist" Value="Wishlist" />
+                   <asp:MenuItem NavigateUrl="~/Cart.aspx" Text="Cart" Value="Cart"/>
+                   <asp:MenuItem NavigateUrl="~/OrderHistory.aspx" Text="Order History" Value="Order History" />
+                    <%--<asp:MenuItem NavigateUrl="~/InfoCenter.aspx" Text="Search" Value="Search"/>--%>
                    <asp:MenuItem NavigateUrl="~/Profile.aspx" Text="Profile" Value="Profile"/>
                    
               </Items>
@@ -65,11 +65,11 @@
                         <ul>
                             <li><asp:HyperLink ID="HyperLink1" NavigateUrl="~/HomePage.aspx" runat="server">Home</asp:HyperLink></li>
                             <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/AboutUs.aspx" runat="server">AboutUs</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink3" NavigateUrl="~/TimeTableGenerator.aspx" runat="server">Timetable</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink4" NavigateUrl="~/Tutorial.aspx" runat="server">Tutorial</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink5" NavigateUrl="~/BMI.aspx" runat="server">BMI</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink6" NavigateUrl="~/Calories.aspx" runat="server">Calories</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink8" NavigateUrl="~/InfoCenter.aspx" runat="server">Search</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink3" NavigateUrl="~/Gallery.aspx" runat="server">Gallery</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink4" NavigateUrl="~/Wishlist.aspx" runat="server">Wishlist</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink5" NavigateUrl="~/Cart.aspx" runat="server">Cart</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink6" NavigateUrl="~/OrderHistory.aspx" runat="server">Order History</asp:HyperLink></li>
+                            <%--<li><asp:HyperLink ID="HyperLink8" NavigateUrl="~/InfoCenter.aspx" runat="server">Search</asp:HyperLink></li>--%>
                             <li><asp:HyperLink ID="HyperLink7" NavigateUrl="~/Profile.aspx" runat="server">Profile</asp:HyperLink></li>
                             
                         </ul>
