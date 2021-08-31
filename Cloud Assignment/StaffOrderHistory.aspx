@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <h1 style="text-align: center">Order management</h1><hr/>
     
-    <div style="width:90%; margin:0 auto; min-height:400px">
+    <div style="width:95%; margin:0 auto; min-height:400px">
     <table class="table table-bordered" style="width: 100%; background-color: pink; color:black; font-size: 18px; ">
                 <tr>
                     <td class ="width1">
@@ -35,6 +35,12 @@
                     <td class ="width1">                                                  
                         Status
                     </td>
+                    <td class ="width1">                                                  
+                        Change Status
+                    </td>
+                    <td class ="width1">                                                  
+                        
+                    </td>
                 </tr>
             </table>
 
@@ -42,7 +48,7 @@
             <asp:Label ID="Label10" runat="server" Text="" style="font-size:x-large;"></asp:Label>
         </div>
 
-    <asp:DataList ID="DataList1" runat="server" DataKeyField="OrderID" DataSourceID="SqlDataSource1" Width="100%">
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="OrderID" DataSourceID="SqlDataSource1" Width="100%" OnItemCommand="DataList1_ItemCommand">
         <ItemTemplate>
             <br />
             <table class="table table-bordered" style="background-color:white; width: 100%; border: 2px solid lightpink;"">
@@ -74,6 +80,16 @@
                     <td class ="width2">                                                  
                         <asp:Label ID="Label9" runat="server" Text='<%# Eval("Status") %>'></asp:Label>
                     </td>
+                    <td class ="width2">                                                  
+                        <asp:DropDownList ID="StatusList" runat="server" style="text-align: center; font-size: 12px;">
+                            <asp:ListItem>Processing</asp:ListItem>
+                            <asp:ListItem>Shipping</asp:ListItem>
+                            <asp:ListItem>Delivered</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                    <td class ="width2">
+                        <asp:Button ID="btnSubmit" CssClass="submit" runat="server" Text="Submit" CommandName="status" CommandArgument='<%# Eval("OrderID") %>'/>
+                    </td>
                 </tr>
             </table>
         </ItemTemplate>
@@ -86,4 +102,5 @@
     </asp:SqlDataSource>
         <br />
     </div>
+        
 </asp:Content>

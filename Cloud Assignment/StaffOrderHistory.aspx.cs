@@ -41,5 +41,39 @@ namespace Cloud_Assignment
                 }
             }
         }
+
+        protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "status")
+            {
+                SqlConnection con;
+                string strcon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                con = new SqlConnection(strcon);
+
+                string selectedItem = e.CommandArgument.ToString();
+                string status = ((DropDownList)e.Item.FindControl("StatusList")).Text;
+                con.Open();
+
+                string strUpdate = "UPDATE [OrderDetails] SET Status = '" + status + "' WHERE OrderID = '" + selectedItem + "'";
+                SqlCommand cmdUpdate = new SqlCommand(strUpdate, con);
+
+                cmdUpdate.Parameters.AddWithValue("@OrderID", selectedItem);
+                cmdUpdate.Parameters.AddWithValue("@Status", status);
+
+                int numRowAffected = cmdUpdate.ExecuteNonQuery();
+
+                if (numRowAffected > 0)
+                {
+                    // return insert success
+                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Updated! " + "');window.location.href = 'StaffOrderHistory.aspx';", true);
+                }
+                else
+                {
+                    // return insert failed
+                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Action failed " + "');", true);
+                }
+                con.Close();
+            }
+        }
     }
 }
