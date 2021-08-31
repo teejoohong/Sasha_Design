@@ -102,6 +102,7 @@
     <Content Include="SellerEditShirt.aspx" />
     <Content Include="SellerUploadShirt.aspx" />
     <Content Include="SellerViewShirt.aspx" />
+    <Content Include="StaffOrderHistory.aspx" />
     <Content Include="Web.config" />
     <Content Include="Wishlist.aspx" />
   </ItemGroup>
@@ -218,6 +219,13 @@
     </Compile>
     <Compile Include="SellerViewShirt.aspx.designer.cs">
       <DependentUpon>SellerViewShirt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffOrderHistory.aspx.cs">
+      <DependentUpon>StaffOrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffOrderHistory.aspx.designer.cs">
+      <DependentUpon>StaffOrderHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="SyaSyaDesign.Master.cs">
       <DependentUpon>SyaSyaDesign.Master</DependentUpon>

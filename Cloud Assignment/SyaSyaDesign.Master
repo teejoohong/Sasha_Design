@@ -20,67 +20,120 @@
 
 <body>
     <form id="form1" runat="server">
-        <div id="topMenu" class="header">
-        <asp:HyperLink ID="logo" runat="server" NavigateUrl="~/HomePage.aspx" ImageUrl="~/BuildInPictures/logoSya.png" CssClass="imgBurgerMenu"/>
-            <% 
-           if (Session["Bar"] == null || Session["Value" ] == "0")
+       <% 
+           if (Session["Bar"] == "C" || Session["Bar"] == null || Session["Value"] == "0")
            {%>
-        <asp:HyperLink ID="linkLogIn" runat="server" NavigateUrl="~/LogIn.aspx" CssClass="logInLink" ValidationGroup="none">SignIn</asp:HyperLink><div class="logInLink">|</div>
-        <asp:HyperLink ID="linkRegister" runat="server" NavigateUrl="~/Register.aspx" CssClass="logInLink" ValidationGroup="none">Register</asp:HyperLink>
-            <%}
-            else{%>
-                   <asp:LinkButton ID="ltnButton1" CssClass="logInLink"  runat="server" style="float:right; color:black; font-size: 16px" OnClick="ltnButton1_Click" ValidationGroup="none">Sign out</asp:LinkButton><div class="logInLink">|</div>
-                     <a href="Profile.aspx" class="logInLink"><asp:Label ID="CustomerUsername" runat="server" Text="Label" style="float:right; color:black;font-size:16px; margin-right:10px" ValidationGroup="none"></asp:Label> </a>                     
-            <%}%>
+            <div id="topMenu" class="header">
+            <asp:HyperLink ID="logo" runat="server" NavigateUrl="~/HomePage.aspx" ImageUrl="~/BuildInPictures/logoSya.png" CssClass="imgBurgerMenu"/>
+           
+                <% 
+               if (Session["Bar"] == null || Session["Value" ] == "0")
+               {%>
+                <asp:HyperLink ID="linkLogIn" runat="server" NavigateUrl="~/LogIn.aspx" CssClass="logInLink" ValidationGroup="none">SignIn</asp:HyperLink><div class="logInLink">|</div>
+                <asp:HyperLink ID="linkRegister" runat="server" NavigateUrl="~/Register.aspx" CssClass="logInLink" ValidationGroup="none">Register</asp:HyperLink>
+                <%}
+                else{%>
+                       <asp:LinkButton ID="ltnButton1" CssClass="logInLink"  runat="server" style="float:right; color:black; font-size: 16px" OnClick="ltnButton1_Click" ValidationGroup="none">Sign out</asp:LinkButton><div class="logInLink">|</div>
+                         <a href="Profile.aspx" class="logInLink"><asp:Label ID="CustomerUsername" runat="server" Text="Label" style="float:right; color:black;font-size:16px; margin-right:10px" ValidationGroup="none"></asp:Label> </a>                     
+                <%}%>
 
-            
-        <asp:Menu ID="menuNav" runat="server" RenderingMode="Table" Orientation="Horizontal" CssClass="menuBar">
-            <StaticSelectedStyle BackColor="lightpink" VerticalPadding="20px"/>   
-            <Items>
-                   <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Home" Value="Home Page"/>
-                   <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="AboutUs" Value="About Us"/>
-                   <asp:MenuItem NavigateUrl="~/Gallery.aspx" Text="Gallery" Value="Gallery"/>
-                   <asp:MenuItem NavigateUrl="~/Wishlist.aspx" Text="Wishlist" Value="Wishlist" />
-                   <asp:MenuItem NavigateUrl="~/Cart.aspx" Text="Cart" Value="Cart"/>
-                   <asp:MenuItem NavigateUrl="~/OrderHistory.aspx" Text="Order History" Value="Order History" />
-                    <%--<asp:MenuItem NavigateUrl="~/InfoCenter.aspx" Text="Search" Value="Search"/>--%>
-                   <asp:MenuItem NavigateUrl="~/Profile.aspx" Text="Profile" Value="Profile"/>
+            <asp:Menu ID="menuNav" runat="server" RenderingMode="Table" Orientation="Horizontal" CssClass="menuBar">
+                <StaticSelectedStyle BackColor="lightpink" VerticalPadding="20px"/>   
+                <Items>
+                       <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Home" Value="Home Page"/>
+                       <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="AboutUs" Value="About Us"/>
+                       <asp:MenuItem NavigateUrl="~/Gallery.aspx" Text="Gallery" Value="Gallery"/>
+                       <asp:MenuItem NavigateUrl="~/Wishlist.aspx" Text="Wishlist" Value="Wishlist" />
+                       <asp:MenuItem NavigateUrl="~/Cart.aspx" Text="Cart" Value="Cart"/>
+                       <asp:MenuItem NavigateUrl="~/OrderHistory.aspx" Text="Order History" Value="Order History" />
+                        <%--<asp:MenuItem NavigateUrl="~/InfoCenter.aspx" Text="Search" Value="Search"/>--%>
+                       <asp:MenuItem NavigateUrl="~/Profile.aspx" Text="Profile" Value="Profile"/>
                    
-              </Items>
-        </asp:Menu>
+                  </Items>
+            </asp:Menu>
 
-            <!--hamburger menu -->
-            <div class="menuWrap">
+                <!--hamburger menu -->
+                <div class="menuWrap">
             
 
-            <input id="Checkbox1" type="checkbox" class="toggler" />
-            <div class="hamburger">
-                <div>
-
-                </div>
-            </div>
-            <div class ="menu">
-                <div>
+                <input id="Checkbox1" type="checkbox" class="toggler" />
+                <div class="hamburger">
                     <div>
-                        <ul>
-                            <li><asp:HyperLink ID="HyperLink1" NavigateUrl="~/HomePage.aspx" runat="server">Home</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/AboutUs.aspx" runat="server">AboutUs</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink3" NavigateUrl="~/Gallery.aspx" runat="server">Gallery</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink4" NavigateUrl="~/Wishlist.aspx" runat="server">Wishlist</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink5" NavigateUrl="~/Cart.aspx" runat="server">Cart</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink6" NavigateUrl="~/OrderHistory.aspx" runat="server">Order History</asp:HyperLink></li>
-                            <%--<li><asp:HyperLink ID="HyperLink8" NavigateUrl="~/InfoCenter.aspx" runat="server">Search</asp:HyperLink></li>--%>
-                            <li><asp:HyperLink ID="HyperLink7" NavigateUrl="~/Profile.aspx" runat="server">Profile</asp:HyperLink></li>
-                            
-                        </ul>
+
                     </div>
                 </div>
+                <div class ="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li><asp:HyperLink ID="HyperLink1" NavigateUrl="~/HomePage.aspx" runat="server">Home</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/AboutUs.aspx" runat="server">AboutUs</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink3" NavigateUrl="~/Gallery.aspx" runat="server">Gallery</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink4" NavigateUrl="~/Wishlist.aspx" runat="server">Wishlist</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink5" NavigateUrl="~/Cart.aspx" runat="server">Cart</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink6" NavigateUrl="~/OrderHistory.aspx" runat="server">Order History</asp:HyperLink></li>
+                                <%--<li><asp:HyperLink ID="HyperLink8" NavigateUrl="~/InfoCenter.aspx" runat="server">Search</asp:HyperLink></li>--%>
+                                <li><asp:HyperLink ID="HyperLink7" NavigateUrl="~/Profile.aspx" runat="server">Profile</asp:HyperLink></li>
+                            
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
-            </div>
-        </div>
+        <%}
+          else{ %>
+           <div class="header">
+           
+            <asp:LinkButton ID="LinkButton1" CssClass="logInLink"  runat="server" style="float:right; color:black; font-size: 16px" OnClick="ltnButton1_Click" ValidationGroup="none">Sign out</asp:LinkButton><div class="logInLink">|</div>
+            <a href="Profile.aspx" class="logInLink"><asp:Label ID="StaffUsername" runat="server" Text="Label" style="float:right; color:black;font-size:16px; margin-right:10px" ValidationGroup="none"></asp:Label> </a> 
 
+             <asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="~/HomePage.aspx" ImageUrl="~/BuildInPictures/logoSya.png" CssClass="imgBurgerMenu"/>
+            <asp:Menu ID="menuNav2" runat="server" RenderingMode="Table" Orientation="Horizontal" CssClass="menuBar">
+                <StaticSelectedStyle BackColor="lightpink" VerticalPadding="20px"/>   
+                <Items>
+                       <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Home" Value="Home Page"/>
+                       <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="AboutUs" Value="About Us"/>
+                       <asp:MenuItem NavigateUrl="~/Gallery.aspx" Text="Gallery" Value="Gallery"/>
+                       <asp:MenuItem NavigateUrl="~/SellerUploadShirt.aspx" Text="Add Clothing" Value="Seller Upload Shirt" />
+                        <asp:MenuItem NavigateUrl="~/SellerViewShirt.aspx" Text="Edit Clothing" Value="Seller View Shirt" />
+                       <asp:MenuItem NavigateUrl="~/StaffOrderHistory.aspx" Text="Order History" Value=" Staff Order History" />
+                       <asp:MenuItem NavigateUrl="~/Profile.aspx" Text="Profile" Value="Profile"/>
+                   
+                  </Items>
+            </asp:Menu>
 
+                <!--hamburger menu -->
+                <div class="menuWrap">
+            
 
+                <input id="Checkbox2" type="checkbox" class="toggler" />
+                <div class="hamburger">
+                    <div>
+
+                    </div>
+                </div>
+                <div class ="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li><asp:HyperLink ID="HyperLink8" NavigateUrl="~/HomePage.aspx" runat="server">Home</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink9" NavigateUrl="~/AboutUs.aspx" runat="server">AboutUs</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink10" NavigateUrl="~/Gallery.aspx" runat="server">Gallery</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink11" NavigateUrl="~/SellerUploadShirt.aspx" runat="server">Add clothing</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink12" NavigateUrl="~/SellerViewShirt.aspx" runat="server">Edit Clothing</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink13" NavigateUrl="~/StaffOrderHistory.aspx" runat="server">Order History</asp:HyperLink></li> 
+                                <li><asp:HyperLink ID="HyperLink14" NavigateUrl="~/Profile.aspx" runat="server">Profile</asp:HyperLink></li>
+                            
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>          
+
+        </div> 
+        <%} %>
+        <br/>
 
         <div class ="pageContent">
             <!--Content for other pages-->
