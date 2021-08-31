@@ -1,0 +1,12 @@
+﻿body {
+}
+
+.btnView {
+    border-color: lightpink;
+    background-color: white;
+    color: black;
+}
+
+    .btnView:hover {
+        background-color: lightpink !important;
+    }
