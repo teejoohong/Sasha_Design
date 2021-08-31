@@ -21,21 +21,23 @@ namespace Cloud_Assignment
                 con = new SqlConnection(strcon);
 
                 con.Open();
-                string strSelect = "Select count(*) From [OrderDetails] Where  DrawID = @DrawID";
+                string strSelect = "Select * From [Order]";
                 SqlCommand cmdSelect = new SqlCommand(strSelect, con);
 
-                cmdSelect.Parameters.AddWithValue("@DrawID", HttpContext.Current.Request.QueryString["id"].ToString());
-                int numRowAffected = (int)cmdSelect.ExecuteScalar();
+                //cmdSelect.Parameters.AddWithValue("@DrawID", HttpContext.Current.Request.QueryString["id"].ToString());
 
-                if (numRowAffected > 0)
+                SqlDataReader dtr = cmdSelect.ExecuteReader();
+
+                if (dtr.HasRows)
                 {
-                    // return insert success
-                    // ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Delete successfully! " + "');", true);
-
+                    while (dtr.Read())
+                    {
+                        
+                    }
                 }
                 else
                 {
-                    Label3.Text = "No record found";
+                    Label10.Text = "No record found";
                 }
             }
         }

@@ -89,6 +89,7 @@
     <Content Include="CSS\Profile.css" />
     <Content Include="CSS\Register.css" />
     <Content Include="CSS\SellerViewShirt.css" />
+    <Content Include="CSS\StaffOrderHistory.css" />
     <Content Include="EditProfile.aspx" />
     <Content Include="EditProfilePicture.aspx" />
     <Content Include="Gallery.aspx" />
