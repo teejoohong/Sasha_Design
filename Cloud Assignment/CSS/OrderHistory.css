@@ -13,6 +13,12 @@
     padding: 5%;
 }
 
+.width2{
+    width: 5%;
+    padding: 5%;
+}
+
+
 .tableFormat {
     border-collapse: collapse;
     border: 5px solid lightpink;
@@ -37,6 +43,10 @@
 
 .btnView:hover {
     background-color: lightpink !important;
+}
+
+.btnChkOut{
+    margin-right:10%
 }
 
 .content {
