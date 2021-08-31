@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SyaSyaDesign.Master" AutoEventWireup="true" CodeBehind="SellerViewShirt.aspx.cs" Inherits="Cloud_Assignment.SellerViewShirt" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="CSS/SellerViewShirt.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/OrderHistory.css" rel="stylesheet" type="text/css" />
     <!--<style type="text/css">
         .DrawID {
             width: 10%;            
@@ -44,69 +44,70 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1 style="text-align: center;">Manage Item</h1>
     <br />
-    <div style="margin:0 auto; width:75%;">
-        Manage Item at below list
+
+    <div >
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>   
     </div>
-    <div style="text-align: center">
-        <asp:Label ID="Label1" runat="server" Text="" style="font-size: x-large;"></asp:Label>   
-    </div>
-    <div class="datatable">
-        <table class="desptable" >
+    <div  style="width:75%; margin:0 auto; min-height:400px">
+        <table class="tableTitle " >
                 <tr>
-                    <th Class="DrawID">
+                    <th class="width2">
                         Item ID
                     </th>
-                    <th Class="Name"> 
+                    <th class="width2"> 
                         Name
                     </th>
-                    <th Class="Category"> 
+                    <th class="width2"> 
                         Category
                     </th>
-                    <th Class="Image">
+                    <th class="width2">
                         Image
                     </th>
-                    <th class="Quantity">
+                    <th class="width2">
                         Quantity
                     </th>
-                    <th Class="Price">
+                    <th  class="width2">
                         Price
                     </th>
-                    <th Class="Edit">
+                    <th  class="width2">
                         Edit
                     </th>
-                    <th Class="Delete">
+                    <th  class="width2">
                         Delete
                     </th>
                 </tr>
              </table>
-        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="DataList1_ItemCommand" CssClass="datatable">
+            <div >
+        Manage Item at below list
+    </div>
+        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Height="16px" Width="100%" OnItemCommand="DataList1_ItemCommand">
         <ItemTemplate>
-            <table class="datalist">
+            <table class="table table-bordered" style="background-color:white; width: 100%; border: 2px solid lightpink;">
                 
                 <tr>
-                    <td Class="DrawID">
+                    <td class="width2">
                         <asp:Label ID="Label2" runat="server" Text='<%# Eval("DrawID") %>'></asp:Label>
                     </td>
-                    <td Class="Name">
+                    <td class="width2">
                         <asp:Label ID="Label3" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
                     </td>
-                    <td Class="Category">
+                    <td class="width2">
                         <asp:Label ID="Label7" runat="server" Text='<%# Eval("Category") %>'></asp:Label>
                     </td>
-                    <td Class="Image">
-                        <%--<asp:Image CssClass="width1" ID="Image1" runat="server" ImageUrl='<%# Eval("Image") %>' Height="75px" Width="100px"/>--%>
+                    <td class="width2">
+                        <%--<asp:Image CssClass="width2" ID="Image1" runat="server" ImageUrl='<%# Eval("Image") %>' Height="75px" Width="100px"/>--%>
                         <asp:ImageButton ID="Image1" runat="server" ImageUrl='<%# Eval("Image") %>' Height="75px" Width="100px" CommandName="ClickImage" CommandArgument='<%# Eval("DrawID") %>'/>
                     </td>
-                    <td Class="Quantity">
+                    <td class="width2">
                         <asp:Label ID="Label6" runat="server" Text='<%# Eval("Total") %>'></asp:Label>
                     </td>
-                    <td Class="Price">
+                    <td class="width2">
                         <asp:Label ID="Label5" runat="server" Text='<%# String.Format("{0:0.00}", Eval("Price")) %>'></asp:Label>
                     </td>
-                    <td Class="Edit">                        
+                    <td class="width2">                        
                         <asp:Button ID="Button1" class="button" runat="server" Text="Edit" CommandName="Edit" CommandArgument='<%# Eval("DrawID") %>'/>
                     </td>
-                    <td Class="Delete">
+                    <td class="width2">
                         <asp:Button ID="Button2" class="button" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%# Eval("DrawID") %>' />
                     </td>
                 </tr>

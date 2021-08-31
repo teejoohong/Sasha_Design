@@ -11,8 +11,10 @@ namespace Cloud_Assignment
 {
     public partial class Cart : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
+           
 
         }
 
@@ -56,6 +58,16 @@ namespace Cloud_Assignment
                 SqlConnection con;
                 string strcon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
                 con = new SqlConnection(strcon);
+
+                con.Open();
+                string strSelect2 = "DELETE from CheckOut Where DrawID=@DrawID and CustomerID = @CustomerID";
+                SqlCommand cmdSelect2 = new SqlCommand(strSelect2, con);
+
+                cmdSelect2.Parameters.AddWithValue("@CustomerID", Session["Value"]);
+                cmdSelect2.Parameters.AddWithValue("@DrawID", hdn.Value.ToString());
+
+                int numRowAffected2 = cmdSelect2.ExecuteNonQuery();
+                con.Close();
 
                 if (chkrow.Checked == true)
                 {
