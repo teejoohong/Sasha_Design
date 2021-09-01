@@ -1,0 +1,14 @@
+﻿body {
+}
+
+.btnView {
+    width: 100px;
+    height: 50px;
+    border-color: lightpink;
+    background-color: white;
+    color: black;
+}
+
+    .btnView:hover {
+        background-color: lightpink !important;
+    }

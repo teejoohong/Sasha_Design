@@ -42,7 +42,7 @@
         -->
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 style="text-align: center;">Manage Item</h1>
+    <h1 style="text-align: center;">Manage Clothing</h1>
     <br />
 
     <div >
@@ -78,7 +78,7 @@
                 </tr>
              </table>
             <div >
-        Manage Item at below list
+        Manage Clothing at below list
     </div>
         <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Height="16px" Width="100%" OnItemCommand="DataList1_ItemCommand">
         <ItemTemplate>
@@ -105,10 +105,10 @@
                         <asp:Label ID="Label5" runat="server" Text='<%# String.Format("{0:0.00}", Eval("Price")) %>'></asp:Label>
                     </td>
                     <td class="width2">                        
-                        <asp:Button ID="Button1" class="button" runat="server" Text="Edit" CommandName="Edit" CommandArgument='<%# Eval("DrawID") %>'/>
+                        <asp:Button ID="Button1" class="btnView" runat="server" Text="Edit" CommandName="Edit" CommandArgument='<%# Eval("DrawID") %>'/>
                     </td>
                     <td class="width2">
-                        <asp:Button ID="Button2" class="button" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%# Eval("DrawID") %>' />
+                        <asp:Button ID="Button2" class="btnView" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%# Eval("DrawID") %>' />
                     </td>
                 </tr>
             </table>

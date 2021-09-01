@@ -1,11 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SyaSyaDesign.Master" AutoEventWireup="true" CodeBehind="SellerEditShirt.aspx.cs" Inherits="Cloud_Assignment.SellerEditShirt" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="CSS/StaffEditShirt.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 style="text-align:center;">Edit Drawing</h1>
+    <h1 style="text-align:center;">Edit Clothing</h1>
     <br />
     <div style="text-align: center">
-        Edit the details of the art posted in the website.
+        Edit the details of the clothing posted in the website.
     </div>
     <br />
     <div style="width:600px; margin-left: auto; margin-right: auto; height:400px">
@@ -25,10 +26,10 @@
                             <asp:Image ID="Image1" runat="server" Width="100px" Height="75px" ImageUrl='<%# Eval("Image") %>' />
                         </td>
                         <td >
-                            <asp:Button ID="Button1" style="border-color: #4D94FF; background-color: white; color: #284E98;" runat="server" Text="Confirm" CommandName="ConfirmEdit" CommandArgument='<%# Eval("DrawID") %>' ValidationGroup="valid1"/>
+                            <asp:Button ID="Button1" class="btnView" runat="server" Text="Confirm" CommandName="ConfirmEdit" CommandArgument='<%# Eval("DrawID") %>' ValidationGroup="valid1"/>
                         </td>
                         <td>
-                            <asp:Button ID="Button2" style="border-color: #4D94FF; background-color: white; color: #284E98;" runat="server" Text="Cancel" CommandName="CancelEdit" />
+                            <asp:Button ID="Button2" class="btnView" runat="server" Text="Cancel" CommandName="CancelEdit" />
                         </td>
                     </tr>
                 </table>

@@ -88,7 +88,10 @@
     <Content Include="CSS\OrderHistoryDetails.css" />
     <Content Include="CSS\Profile.css" />
     <Content Include="CSS\Register.css" />
+    <Content Include="CSS\SellerUploadShirt.css" />
     <Content Include="CSS\SellerViewShirt.css" />
+    <Content Include="CSS\StaffEditShirt.css" />
+    <Content Include="CSS\StaffOrderHistory.css" />
     <Content Include="EditProfile.aspx" />
     <Content Include="EditProfilePicture.aspx" />
     <Content Include="Gallery.aspx" />
@@ -102,6 +105,7 @@
     <Content Include="SellerEditShirt.aspx" />
     <Content Include="SellerUploadShirt.aspx" />
     <Content Include="SellerViewShirt.aspx" />
+    <Content Include="StaffOrderHistory.aspx" />
     <Content Include="Web.config" />
     <Content Include="Wishlist.aspx" />
   </ItemGroup>
@@ -218,6 +222,13 @@
     </Compile>
     <Compile Include="SellerViewShirt.aspx.designer.cs">
       <DependentUpon>SellerViewShirt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffOrderHistory.aspx.cs">
+      <DependentUpon>StaffOrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffOrderHistory.aspx.designer.cs">
+      <DependentUpon>StaffOrderHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="SyaSyaDesign.Master.cs">
       <DependentUpon>SyaSyaDesign.Master</DependentUpon>
