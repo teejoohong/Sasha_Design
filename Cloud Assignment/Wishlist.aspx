@@ -1,11 +1,30 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SyaSyaDesign.Master" AutoEventWireup="true" CodeBehind="Wishlist.aspx.cs" Inherits="Cloud_Assignment.Wishlist" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="CSS/OrderHistory.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style type="text/css">
-        .auto-style1 {
+        .auto-style {
             width: 100%;
-            background-color : lightgray;
+            background-color: pink;
+        }
+
+        .auto-style1 {
+            text-align: center;
+            background-color: white;
+        }
+        .buttonLogin {
+            background-color: white;
+            color: black;
+            width: 26%;
+            height: 30px;
+            font-size: 12px;
+            border: 2px solid lightpink;
+        }
+
+        .buttonLogin:hover {
+            cursor: pointer;
+            background-color: lightpink;
         }
         .width1 {
             width: 15.8%;
@@ -14,7 +33,7 @@
         }
         .tableFormat {
             border-collapse: collapse;
-            border: 1px solid grey;
+            border: 5px solid lightpink;
             height: auto;
             width :700px;
             margin-left: auto;
@@ -32,40 +51,37 @@
         .btnDelete{
             border-color: #4D94FF; background-color: white; color: #284E98;
         }
+        .auto-style3 {
+            height: 29px;
+        }
     </style>
 
-      <h1 style="text-align:center">Wishlist</h1><hr />
      <% if (Session["Value"] == "0" || Session["Value"] == null)
           { %>
-        <div style="height:400px; margin: 0 10%;">
-            <table class="tableFormat">
+               <div >
+             <table id="loginForm" class="inputForm">
                 <tr>
-                    <td class="auto-style">
-                        <p style="text-align:center; font-size:x-large">Please log in to view your wishlist.</p>
-                           </td>
+                    <th colspan="2"><h2>Wishlist</h2></th>
                 </tr>
                 <tr>
-                    <td class="auto-style">
-                            &nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
                 </tr>
-                <tr>
-                    <td style="text-align:center">
-                          
-                            <asp:Button ID="btnSignIn" runat="server" Text="Sign In" style="border-color: #4D94FF;
-                            background-color: white; color: #284E98; font-size:x-large; text-align:center;" 
-                            OnClick="btnSignIn_Click" Width="320px"/>
-                
+                <tr style="text-align:center">
+                    <td colspan="2">
+                        <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="buttonLogin" OnClick="btnLogin_Click"/>
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align:center">
-                           &nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr style="text-align:center">
+                    <td colspan="2">
+                        <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="buttonLogin" OnClick="btnRegister_Click" />
+                    </td>
                 </tr>
                 <tr>
-                    <td style="text-align:center">
-                           &nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
                 </tr>
-               
             </table>
             </div>
 
@@ -76,22 +92,22 @@
                 <tr>
                     
 
-                    <th class="auto-style2">
+                    <td class="auto-style2">
                         Name
-                    </th>
+                    </td>
 
-                    <th class="auto-style2">
+                    <td class="auto-style2">
                         Image
-                    </th>
-                    <th class="auto-style2">
+                    </td>
+                    <td class="auto-style2">
                         Description
-                    </th>
-                    <th class="auto-style2">
+                    </td>
+                    <td class="auto-style2">
                         Price
-                    </th>
-                    <th class="auto-style2">
+                    </td>
+                    <td class="auto-style2">
                         Delete
-                    </th>
+                    </td>
                 </tr>
             </table>
     <div style=" text-align:center">

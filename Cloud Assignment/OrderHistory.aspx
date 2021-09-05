@@ -3,60 +3,57 @@
     <link href="CSS/OrderHistory.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 style="text-align:center">Order History</h1><hr />
+
     <% if (Session["Value"] == "0" || Session["Value"] == null)
           { %>
-        <div style="height:400px">
-            <table class="tableFormat">
+                 <div ID="loginView">
+              <table id="loginForm" class="inputForm">
                 <tr>
-                    <td class="auto-style">
-                        <p style="text-align:center; font-size:x-large">Please log in to view your order history.</p>
-                     </td>
+                    <th colspan="2"><h2>Order History</h2></th>
                 </tr>
                 <tr>
-                    <td class="auto-style1">
-                            &nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
                 </tr>
-                <tr>
-                    <td class="auto-style1">
-                          
-                            <asp:Button ID="btnSignIn" runat="server" Text="Sign In"  CssClass="buttonLogin" OnClick="btnSignIn_Click"/>
-                
+                <tr style="text-align:center">
+                    <td colspan="2">
+                        <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="buttonLogin" OnClick="btnLogin_Click"/>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">
-                           &nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr style="text-align:center">
+                    <td colspan="2">
+                        <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="buttonLogin" OnClick="btnRegister_Click"  />
+                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">
-                           &nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
                 </tr>
-               
             </table>
-            </div>
+        </div>
 
      <%}
          else{ %>
     <div style="width:75%; margin:0 auto; min-height:400px">
     <table class="tableTitle ">
                 <tr>
-                    <th class="width1">
+                    <td class="width1">
                         Order ID
-                    </th>
-                    <th class="width1">
+                    </td>
+                    <td class="width1">
                         Delivery Address
-                    </th>
-                    <th class="width1">
+                    </td>
+                    <td class="width1">
                         Date
-                    </th>
+                    </td>
                     
-                    <th class="width1">
+                    <td class="width1">
                         Price
-                    </th>
-                    <th class="width1">
+                    </td>
+                    <td class="width1">
                         Detail
-                    </th>
+                    </td>
                 </tr>
     </table>
     <div style=" text-align:center">

@@ -21,7 +21,7 @@
 
 .frame {
     width: 260px;
-    height: 300px;
+    height: 200px;
     border: 2px solid black;
     border-top: none;
     padding: 5%;
@@ -44,9 +44,15 @@
     background-color: ghostwhite;
     text-align: center;
     color: rgb(100,149,237);
-    width: 800px;
+    width: 20%;
     height: 50px;
+    padding-top: 20px
 }
+
+    .linkBtn:hover {
+        background-color: cornflowerblue;
+        color: white;
+    }
 
 .background {
     background-position: center;

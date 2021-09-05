@@ -340,6 +340,16 @@ namespace Cloud_Assignment
                 }
                 Response.Redirect("Cart.aspx");
             }
+
+        }
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("LogIn.aspx");
         }
     }
 }
