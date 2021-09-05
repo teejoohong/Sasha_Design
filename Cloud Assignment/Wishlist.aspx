@@ -48,9 +48,7 @@
             background-color : darkgray;
             padding:5%;
         }
-        .btnDelete{
-            border-color: #4D94FF; background-color: white; color: #284E98;
-        }
+
         .auto-style3 {
             height: 29px;
         }
@@ -91,20 +89,20 @@
     <table class="tableTitle ">
                 <tr>      
 
-                    <td class="auto-style2">
+                    <td class="width2">
                         Name
                     </td>
 
-                    <td class="auto-style2">
+                    <td class="width2">
                         Image
                     </td>
-                    <td class="auto-style2">
+                    <td class="width2">
                         Description
                     </td>
-                    <td class="auto-style2">
+                    <td class="width2">
                         Price
                     </td>
-                    <td class="auto-style2">
+                    <td class="width2">
                         Delete
                     </td>
                 </tr>
@@ -116,26 +114,26 @@
         <asp:DataList ID="DataList1" runat="server" DataKeyField="CustomerID" DataSourceID="SqlDataSource1" OnItemCommand="DataList1_ItemCommand" Height="16px" Width="100%">
             <ItemTemplate>
                 <br />
-                <table class="table table-bordered" style="width: 100%; background-color: lightgray">
+                <table class="table table-bordered" style="width: 100%; background-color: white; border: 2px solid lightpink;">
                     <tr>
                         
-                        <td class="width1">
+                        <td class="width2">
                             
                             <asp:Label ID="Label2" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
                         </td>
-                        <td class="width1">
+                        <td class="width2">
                             
                             <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Image") %>' Height="100px" Width="100px" />
                         </td>
-                        <td class="width1">
+                        <td class="width2">
                             
                             <asp:Label ID="Label3" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
                         </td>
-                        <td class="width1">
+                        <td class="width2">
                             
                             <asp:Label ID="Label4" runat="server" Text='<%# String.Format("RM {0:0.00}",Eval("Price")) %>'></asp:Label>
                         </td>
-                        <td class="width1">
+                        <td class="width2">
                             <asp:Button ID="Button1" runat="server" CssClass="btnDelete" Text="Delete" CommandName="Delete" CommandArgument='<%# Eval("DrawID") %>'/>
                         </td>
                     </tr>
