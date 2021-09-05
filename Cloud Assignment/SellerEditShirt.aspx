@@ -78,7 +78,7 @@
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*This field is required." ControlToValidate="QuantityTxt" SetFocusOnError="true" ForeColor="Red" Font-Size="Small" ValidationGroup="valid1"></asp:RequiredFieldValidator>
                     <br />
-                    <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Insert between 0-10." ControlToValidate="QuantityTxt" MaximumValue="10" MinimumValue="0" Type="Integer" SetFocusOnError="true" ForeColor="Red" Font-Size="Small" ValidationGroup="valid1"></asp:RangeValidator>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Insert between 0-10." ControlToValidate="QuantityTxt" MaximumValue="300" MinimumValue="0" Type="Integer" SetFocusOnError="true" ForeColor="Red" Font-Size="Small" ValidationGroup="valid1"></asp:RangeValidator>
                 </td>
                 <td>
                     <br />

@@ -6,14 +6,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <link href="CSS/Gallery.css" rel="stylesheet" type="text/css" />
 
-        <div class="background">
             <div class="container">
             <asp:LinkButton ID="ShowAll" runat="server" OnClick="ShowAll_Click" CssClass="linkBtn">Show All</asp:LinkButton><br />
             <asp:LinkButton ID="DrawingFilter" runat="server" OnClick="LinkButton1_Click" CssClass="linkBtn">T-shirt</asp:LinkButton><br />
-            <asp:LinkButton ID="SculptureFilter" runat="server" OnClick="SculptureFilter_Click" CssClass="linkBtn">Collar</asp:LinkButton><br />
-            <asp:LinkButton ID="Painting" runat="server" OnClick="Painting_Click" CssClass="linkBtn">Painting</asp:LinkButton>
+            <asp:LinkButton ID="SculptureFilter" runat="server" OnClick="SculptureFilter_Click" CssClass="linkBtn">Dress</asp:LinkButton><br />
+            <asp:LinkButton ID="Painting" runat="server" OnClick="Painting_Click" CssClass="linkBtn">Sport</asp:LinkButton>
             </div>
-        <asp:DataList ID="DataList1" runat="server" DataKeyField="DrawID" DataSourceID="SqlDataSource1" CellPadding="20" RepeatColumns="5" RepeatDirection="Horizontal" OnItemCommand="DataList1_ItemCommand"  AllowPaging="true" PageSize ="2">
+    <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center" CssClass="dataList">
+         <asp:DataList ID="DataList1" runat="server" DataKeyField="DrawID" DataSourceID="SqlDataSource1" CellPadding="20" RepeatColumns="4" RepeatDirection="Horizontal" OnItemCommand="DataList1_ItemCommand"  AllowPaging="true" PageSize ="2">
             <ItemTemplate>
                   
                     <asp:Image ID="Image1" CssClass="Img" runat="server" ImageUrl='<%# Eval("Image") %>' />
@@ -34,8 +34,10 @@
                     </div>
                 </ItemTemplate>
         </asp:DataList>
+
+    </asp:Panel>
+       
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Gallery]"></asp:SqlDataSource>
-    </div>
 
   
 

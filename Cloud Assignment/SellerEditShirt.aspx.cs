@@ -79,7 +79,7 @@ namespace Cloud_Assignment
                 {
                     // return insert success
                     ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Edited! " + "');", true);
-                    Response.Redirect("GalleryArtist.aspx");
+                    Response.Redirect("SellerViewShirt.aspx");
                 }
                 else
                 {

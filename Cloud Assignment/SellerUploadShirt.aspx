@@ -102,8 +102,8 @@
             <td>
                 <asp:DropDownList ID="CategoryList" runat="server">
                     <asp:ListItem>T-shirt</asp:ListItem>
-                    <asp:ListItem>Collar</asp:ListItem>
-                    <asp:ListItem>dummy</asp:ListItem>
+                    <asp:ListItem>Dress</asp:ListItem>
+                    <asp:ListItem>Sport</asp:ListItem>
                 </asp:DropDownList></td>
         </tr>
         <tr>
