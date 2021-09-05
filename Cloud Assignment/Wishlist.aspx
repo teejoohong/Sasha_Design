@@ -88,9 +88,8 @@
      <%}
           else{ %>
     <div style="width:75%; margin:0 auto; min-height:400px">
-    <table class="table table-bordered" style="width: 100%; background-color: darkgray">
-                <tr>
-                    
+    <table class="tableTitle ">
+                <tr>      
 
                     <td class="auto-style2">
                         Name
