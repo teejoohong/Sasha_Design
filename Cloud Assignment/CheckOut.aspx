@@ -37,7 +37,7 @@
     <div style="width:75%; margin:0% 10% 0% 10%; min-height:400px">
     <table class="table table-bordered" style="width: 100%; background-color: pink">
                 <tr>
-                    <td class="width1" style="font-weight: bold">
+                    <td class="width1" style="font-weight: bold" >
                         Draw ID
                     </td>
 
@@ -59,7 +59,7 @@
 
     <asp:DataList ID="DataList1" runat="server"  DataSourceID="SqlDataSource1" Width="100%">
         <ItemTemplate>
-            <table class="table table-bordered" style="width: 100%; background-color: lightgray">
+            <table class="table table-bordered" style="width: 100%; background-color: white">
                 <tr>
                     <td class="width1">
                         <asp:Label ID="Label2" runat="server" Text='<%# Eval("DrawID") %>'></asp:Label>
