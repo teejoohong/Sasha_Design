@@ -14,8 +14,124 @@ namespace Cloud_Assignment
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
 
+            // Session["Value"] = "CS1";
+            if (Session["Value"] != "0" && Session["Value"] != null)
+            {
+                SqlConnection con;
+                string strcon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                con = new SqlConnection(strcon);
+
+                //later user inside the while 
+                SqlConnection conn;
+                string strconn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                conn = new SqlConnection(strconn);
+
+                //use for the dtr1 of for the extract of gallery value
+                SqlConnection con1;
+                string strcon1 = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                con1 = new SqlConnection(strcon1);
+
+                if (!IsPostBack)
+                {   //cleat out the cart first, to prevent anything inside and data crash occur
+                    con.Open();
+                    string strSelect2 = "DELETE  from CheckOut Where CustomerID = @CustomerID2";
+                    SqlCommand cmdSelect2 = new SqlCommand(strSelect2, con);
+                    cmdSelect2.Parameters.AddWithValue("@CustomerID2", Session["Value"]);
+                    int numRowAffected2 = cmdSelect2.ExecuteNonQuery();
+                    con.Close();
+
+                    // check the row inside the cart
+                    con.Open();
+                    string strSelect4 = "Select count(*) from CartGallery Where CustomerID = @CustomerID4";
+                    SqlCommand cmdSelect4 = new SqlCommand(strSelect4, con);
+                    cmdSelect4.Parameters.AddWithValue("@CustomerID4", Session["Value"]);
+                    int numRowAffected4 = (int)cmdSelect4.ExecuteScalar();
+                    con.Close();
+
+                    //if contain rows, update the check the quantity of item left and update the value
+                    if (numRowAffected4 > 0)
+                    {
+                        //extract the value from gallery (newest)
+                        Label3.Text = numRowAffected4.ToString();
+
+                        for (int i = 0; i < numRowAffected4; i++)
+                        {
+                            con1.Open();
+                            string strSelect3 = "Select * from Gallery";
+                            SqlCommand cmdSelect3 = new SqlCommand(strSelect3, con1);
+                            SqlDataReader dtr1 = cmdSelect3.ExecuteReader();
+
+                            con.Open();
+                            string strSelect5 = "Select * from CartGallery Where CustomerID = @CustomerID5";
+                            SqlCommand cmdSelect5 = new SqlCommand(strSelect5, con);
+                            cmdSelect5.Parameters.AddWithValue("@CustomerID5", Session["Value"]);
+                            SqlDataReader dtr = cmdSelect5.ExecuteReader();
+                            if (dtr.HasRows)
+                            {
+                                while (dtr1.Read() && dtr.Read())
+                                {
+
+                                    if (dtr1["DrawID"].ToString().Equals(dtr["DrawID"]) && (int.Parse(dtr1["Total"].ToString()) < int.Parse(dtr["Quantity"].ToString())))
+                                    {
+                                        if (int.Parse(dtr1["Total"].ToString()) == 0)
+                                        {
+                                            conn.Open();
+                                            string strUpdate = "UPDATE [CartGallery] SET Quantity = @Quantity WHERE DrawID = @DrawID";
+                                            SqlCommand cmdUpdate = new SqlCommand(strUpdate, conn);
+
+                                            cmdUpdate.Parameters.AddWithValue("@DrawID", dtr["DrawID"]);
+                                            cmdUpdate.Parameters.AddWithValue("@Quantity", 0);
+                                            int numRowAffected6 = cmdUpdate.ExecuteNonQuery();
+                                            conn.Close();
+
+                                        }
+                                        else if (int.Parse(dtr1["Total"].ToString()) < int.Parse(dtr["Quantity"].ToString()))
+                                        {
+                                            conn.Open();
+                                            string strUpdate = "UPDATE [CartGallery] SET Quantity = @Quantity WHERE DrawID = @DrawID";
+                                            SqlCommand cmdUpdate = new SqlCommand(strUpdate, conn);
+
+                                            cmdUpdate.Parameters.AddWithValue("@DrawID", dtr["DrawID"]);
+                                            cmdUpdate.Parameters.AddWithValue("@Quantity", int.Parse(dtr1["Total"].ToString()));
+                                            int numRowAffected7 = cmdUpdate.ExecuteNonQuery();
+                                            conn.Close();
+                                        }
+                                    }
+                                }
+                            }
+                            con.Close();
+                            con1.Close();
+                        }
+
+                    }
+                    else
+                    {
+                        Label3.Text = "No record found";
+                    }
+                }
+
+                //con.Open();
+                //string strSelect = "SELECT count(*) from CartGallery Where CustomerID = @CustomerID";
+                //SqlCommand cmdSelect = new SqlCommand(strSelect, con);
+
+                //cmdSelect.Parameters.AddWithValue("@CustomerID", Session["Value"]);
+
+                //int numRowAffected = (int)cmdSelect.ExecuteScalar();
+
+                //if (numRowAffected > 0)
+                //{
+                //    // return insert success
+                //    // ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Delete successfully! " + "');", true)
+                //}
+                //else
+                //{
+                //    Label3.Text = "No record found";
+                //}
+                //con.Close();
+
+
+            }
         }
 
         protected void check_Out_Click(object sender, EventArgs e)
