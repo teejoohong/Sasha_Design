@@ -35,7 +35,7 @@
         <br />
     </div>
     <div style="width:75%; margin:0% 10% 0% 10%; min-height:400px">
-    <table class="table table-bordered" style="width: 100%; background-color: darkgray">
+    <table class="table table-bordered" style="width: 100%; background-color: pink">
                 <tr>
                     <td class="width1" style="font-weight: bold">
                         Draw ID
