@@ -78,3 +78,31 @@
     font-size: 18px;
 }
 
+.inputForm th {
+    border-bottom: 2px solid hotpink;
+    background-color: pink;
+    color: black;
+    font-size: 18px;
+}
+
+.inputForm {
+    margin: 50px auto 100px auto;
+    width: 50%;
+    border: 2px solid lightpink;
+    background-color: white;
+}
+
+.buttonLogin {
+    background-color: white;
+    color: black;
+    width: 26%;
+    height: 30px;
+    font-size: 12px;
+    border: 2px solid lightpink;
+}
+
+    .buttonLogin:hover {
+        cursor: pointer;
+        background-color: lightpink;
+    }
+

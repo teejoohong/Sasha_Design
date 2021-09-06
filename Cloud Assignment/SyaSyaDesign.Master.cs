@@ -18,11 +18,38 @@ namespace Cloud_Assignment
             if (!IsPostBack)
             {
 
-                //if (Session["Username"] != null)
-                //{
-                //    CustomerUsername.Text = Session["Username"].ToString();
+                foreach (MenuItem item in menuNav2.Items)
+                {
+                    if (item.NavigateUrl.Equals(Request.AppRelativeCurrentExecutionFilePath))
+                    {
+                        item.Selected = true;
+                        //Label1.Text = HttpContext.Current.Request.Url.AbsolutePath; /HomePage.aspx
+                        //Label1.Text = item.Text.ToString(); Home
+                        //Label1.Text = item.NavigateUrl.ToString(); ~/Calories.aspx
+                    }
+                    pageName = HttpContext.Current.Request.Url.AbsolutePath;
+                    if (pageName == "/EditProfile.aspx" || pageName == "/EditProfilePicture.aspx" || pageName == "/UserPreference.aspx")
+                    {
+                        menuNav2.FindItem("Profile").Selected = true;
+                    }
+                }
 
-                //}
+                foreach (MenuItem item in menuNav.Items)
+                {
+                    if (item.NavigateUrl.Equals(Request.AppRelativeCurrentExecutionFilePath))
+                    {
+                        item.Selected = true;
+                        //Label1.Text = HttpContext.Current.Request.Url.AbsolutePath; /HomePage.aspx
+                        //Label1.Text = item.Text.ToString(); Home
+                        //Label1.Text = item.NavigateUrl.ToString(); ~/Calories.aspx
+                    }
+                    pageName = HttpContext.Current.Request.Url.AbsolutePath;
+                    if (pageName == "/EditProfile.aspx" || pageName == "/EditProfilePicture.aspx" || pageName == "/UserPreference.aspx")
+                    {
+                        menuNav.FindItem("Profile").Selected = true;
+                    }
+                }
+
                 if (Session["Value"] != null && Session["Value"] != "0")
                 {
                     SqlConnection con;
@@ -49,21 +76,7 @@ namespace Cloud_Assignment
                         }
                         con.Close();
 
-                        foreach (MenuItem item in menuNav2.Items)
-                        {
-                            if (item.NavigateUrl.Equals(Request.AppRelativeCurrentExecutionFilePath))
-                            {
-                                item.Selected = true;
-                                //Label1.Text = HttpContext.Current.Request.Url.AbsolutePath; /HomePage.aspx
-                                //Label1.Text = item.Text.ToString(); Home
-                                //Label1.Text = item.NavigateUrl.ToString(); ~/Calories.aspx
-                            }
-                            pageName = HttpContext.Current.Request.Url.AbsolutePath;
-                            if (pageName == "/EditProfile.aspx" || pageName == "/EditProfilePicture.aspx" || pageName == "/UserPreference.aspx")
-                            {
-                                menuNav2.FindItem("Profile").Selected = true;
-                            }
-                        }
+                        
                     }
                     else
                     {
@@ -84,21 +97,7 @@ namespace Cloud_Assignment
                         }
                         con.Close();
 
-                        foreach (MenuItem item in menuNav.Items)
-                        {
-                            if (item.NavigateUrl.Equals(Request.AppRelativeCurrentExecutionFilePath))
-                            {
-                                item.Selected = true;
-                                //Label1.Text = HttpContext.Current.Request.Url.AbsolutePath; /HomePage.aspx
-                                //Label1.Text = item.Text.ToString(); Home
-                                //Label1.Text = item.NavigateUrl.ToString(); ~/Calories.aspx
-                            }
-                            pageName = HttpContext.Current.Request.Url.AbsolutePath;
-                            if (pageName == "/EditProfile.aspx" || pageName == "/EditProfilePicture.aspx" || pageName == "/UserPreference.aspx")
-                            {
-                                menuNav.FindItem("Profile").Selected = true;
-                            }
-                        }
+
                     }
                 }
             }

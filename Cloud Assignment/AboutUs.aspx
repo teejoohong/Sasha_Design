@@ -11,16 +11,15 @@
         
         <article><br />
  
-            <p>Smart Personal Scheduler provide you an easy way for you to create
-                a timetable!
+            <p>SyasyaDesign is an online shop that provding plus size apparel for woman.
             </p>
             <p>
-                We aimed to assist users in changing from unhealty living lifestyle
-                to a healtheir lifestyle and make users more discipline in term of 
-                their daily activities to get rid of unhealthy living lifestyle!
+                We aimed to assist users in changing from the suffer of finding suitable 
+                clothing from various of clothing in the market. 
+                Each woman should have their own choice of their wear and use!
             </p>
-            <p> Try it out now! Tutorial is also available to guide
-                you through out the timetable generation process!
+            <p> Try it out now! Demostration of clothing is also available to let
+                you have a look before you purchase!
             </p><br /><br /><br /><br /><br />
            
         </article>

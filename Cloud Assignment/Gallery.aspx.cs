@@ -13,7 +13,11 @@ namespace Cloud_Assignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                SqlDataSource1.SelectCommand = "SELECT * FROM [Gallery] Where [Total] > 0";
 
+            }
         }
 
         protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
@@ -184,12 +188,12 @@ namespace Cloud_Assignment
 
         protected void SculptureFilter_Click(object sender, EventArgs e)
         {
-            SqlDataSource1.SelectCommand = "SELECT * FROM [Gallery] Where [Total] > 0 and Category='Collar'";
+            SqlDataSource1.SelectCommand = "SELECT * FROM [Gallery] Where [Total] > 0 and Category='Dress'";
         }
 
         protected void Painting_Click(object sender, EventArgs e)
         {
-            SqlDataSource1.SelectCommand = "SELECT * FROM [Gallery] Where [Total] > 0 and Category='Painting'";
+            SqlDataSource1.SelectCommand = "SELECT * FROM [Gallery] Where [Total] > 0 and Category='Sport'";
         }
     }
 }

@@ -4,43 +4,36 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
-
-     <h1 style="text-align:center">Cart</h1><hr />
         
         <div style=" margin:0 auto; min-height:400px">
         <% if (Session["Value"] == "0" || Session["Value"] == null)
           { %>
-            <div style="height:400px">
-            <table class="tableFormat">
+            <div ID="loginView">
+              <table id="loginForm" class="inputForm">
                 <tr>
-                    <td class="auto-style">
-                        <p style="text-align:center; font-size:x-large">Please log in to view your cart.</p>
-                           </td>
+                    <th colspan="2"><h2>Cart</h2></th>
                 </tr>
                 <tr>
-                    <td class="auto-style">
-                            &nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
                 </tr>
-                <tr>
-                    <td style="text-align:center">
-                          
-                            <asp:Button ID="btnSignIn" runat="server" Text="Sign In" style="border-color: #4D94FF;
-                            background-color: white; color: #284E98; font-size:x-large; text-align:center;" 
-                            OnClick="btnSignIn_Click" Width="320px"/>
-                
+                <tr style="text-align:center">
+                    <td colspan="2">
+                        <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="buttonLogin" OnClick="btnLogin_Click" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align:center">
-                           &nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr style="text-align:center">
+                    <td colspan="2">
+                        <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="buttonLogin" OnClick="btnRegister_Click"   />
+                    </td>
                 </tr>
                 <tr>
-                    <td style="text-align:center">
-                           &nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
                 </tr>
-               
             </table>
-            </div>
+        </div>
         <%}
           else{ %>
          <div style="width:80%; margin:0 auto; min-height:400px">

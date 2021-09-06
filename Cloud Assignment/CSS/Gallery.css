@@ -21,7 +21,7 @@
 
 .frame {
     width: 260px;
-    height: 300px;
+    height: 200px;
     border: 2px solid black;
     border-top: none;
     padding: 5%;
@@ -33,29 +33,32 @@
 .container {
     display: flex;
     align-items: flex-start;
-    margin: 0 0 1% 5%;
+    margin-left: 20.5%;
+    margin-bottom: 20px;
     padding-top: 2%;
 }
 
 .linkBtn {
     font-weight: bold;
     text-decoration: none;
-    border: 1px solid #4D94FF;
+    border: 1px solid pink;
     background-color: ghostwhite;
     text-align: center;
-    color: rgb(100,149,237);
-    width: 800px;
+    color: black;
+    width: 20%;
     height: 50px;
+    padding-top: 20px
 }
 
-.background {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 1800px;
-    font-size: 16px;
-    margin-right: auto;
-    margin-bottom: 3%;
-    background-color: none;
+.dataList {
+    overflow-x: scroll;
+    margin-left: 10%;
+    width: 85%
 }
+
+    .linkBtn:hover {
+        background-color: lightpink;
+
+    }
+
+
