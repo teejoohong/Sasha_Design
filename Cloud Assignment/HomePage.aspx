@@ -41,7 +41,7 @@
         <table class="tableThreeContainer">
         <tr style="text-align:center">
             <td><h2>Order Now</h2><hr /></td>
-            <td><h2>Bla Bla bla</h2><hr /></td>
+            <td><h2>About Us</h2><hr /></td>
  
         </tr>
         <tr>
@@ -53,7 +53,7 @@
                 AlternateText="Calculator"  Width ="100%" Height="100%" />
                 </a>
                 <br />
-                <asp:Button ID="btnBMI" CssClass="btnContainer" runat="server" Text="Order Now" />
+                <asp:Button ID="btnBMI" CssClass="btnContainer" runat="server" Text="Order Now" OnClick="btnBMI_Click" />
             </div>
             </td>
             <td>
@@ -64,7 +64,7 @@
                                     AlternateText="Smart Personal Scheduler" Width ="100%" Height="100%" />
                 </a>
                 <br />
-                <asp:Button ID="btnTimetable" CssClass="btnContainer" runat="server" Text="Bla Bla Bla" />
+                <asp:Button ID="btnTimetable" CssClass="btnContainer" runat="server" Text="About Us" OnClick="btnTimetable_Click" />
             
             </div>
             </td>
